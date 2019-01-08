@@ -1,0 +1,229 @@
+/* centers navbar properly */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.navbar nav {
+  border-left: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.navbar nav a {
+ /* display: inline-block;*/ /*when this is available, the drop-down menu doesn't work */
+  width: 24%; /* so far does nothing */
+  margin: 0; /* so far does nothing */
+  padding: 20px 0; /*so far does nothing */
+  text-transform: uppercase;
+  color: black;
+  text-align: center; /* so far does nothing */
+  /*border-right: 1px solid #ccc; *//* dont use. this doesnt position according to the li */
+  text-decoration: none; /* gets rid of underline for links */
+}
+
+.menu li:hover .sub-menu {
+    z-index:3;
+    opacity:1;
+}
+
+.menu > ul {
+/*	background-color: #5e5d5d;
+	color: #D8D8D8;
+	font-size: 20px;
+	font-family: sans-serif;*/
+	width: 100%;
+}
+
+/* li is the child of ul, which is the child of .menu */
+.menu > ul > li {
+		list-style-type: none; /*remove bullets */
+		display: inline-block; /* so this list is not vertical, but horizontal */
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 25px;
+		padding-right: 25px;
+		position: relative; /* so sub-menu position: absolute will work properly */
+		border-right: 1px solid #ccc; /* new */
+}
+
+.menu > ul > li:hover {
+	/*	background-color: #383838; */
+}
+
+.menu li:hover .submenu {
+	opacity: 1; /* so hover over submenu will display */
+}
+
+
+ul.sub-menu {
+	position: absolute;  /* parent element must be position: relative */
+	list-style-type: none;
+	width: 169px;
+	padding-left: 0px;
+	margin-left: -25px;
+	padding-top: 5px;
+
+	 opacity: 0; /* make the submenu invisible until hover */
+	 /*	background-color: #383838; */
+}
+
+ul.sub-menu li {
+	padding-left: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+	
+ul.sub-menu li:hover {
+/*	color: white;
+	background-color: #656565;
+*/
+}
+
+.menu li:hover{
+/*   color:white;*/
+
+}
+
+/* the rest of the styles */
+
+/*////////// LOGO //////////*/
+
+#logo {
+  padding: 74px 0 0;
+      text-align: center;
+}
+
+#logo h1 {
+  display: inline-block;
+  /*font: 2.5em "Clicker Script", cursive;*/
+  margin: 0;
+  position: relative;
+  top: -9px;
+  left: 5px;
+  color: #303;
+  
+
+}
+
+section {
+  padding: 30px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+footer {
+	display: inline-block;
+	font-size: 10px;
+	text-align: center;
+}
+.pageTitle {
+	font-size:  32px;
+}
+.col-3 {
+  -moz-column-rule: 1px dotted #ccc;
+  -webkit-column-rule: 1px dotted #ccc;
+  column-rule: 1px dotted #ccc;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  column-gap: 1.5em;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+}
+
+[class*="col-"] {
+  margin-left: 2%;
+}
+
+#recommendation  {
+	display: inline-block;	
+	font-size: 12px;
+}
+
+.author {
+	border-bottom: 1px solid #ccc;
+}
+
+.recommend.first
+{
+	border-top: 1px solid #ccc;
+}
+.recommend  {
+	font-style: italic;
+}
+
+/*////////// BACKGROUNDS //////////*/
+
+.blue-back {
+  background: url(../images/Abstract-Blue-Web-Background.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+.light-fade {
+  background: #efefef; /* Old browsers */
+  background: -moz-linear-gradient(top,  #efefef 0%, #ffffff 24%, #ffffff 68%, #dddddd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#efefef), color-stop(24%,#ffffff), color-stop(68%,#ffffff), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #efefef 0%,#ffffff 24%,#ffffff 68%,#dddddd 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+}
+
+.medium-fade {
+  background: rgb(229,229,229); /* Old browsers */
+  background: -moz-linear-gradient(top,  rgba(229,229,229,1) 0%, rgba(255,255,255,1) 99%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(229,229,229,1)), color-stop(99%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 99%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 99%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 99%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(229,229,229,1) 0%,rgba(255,255,255,1) 99%); /* W3C */
+}
+
+.shadow {
+  box-shadow: 0 3px 10px #333;
+}
+
+/*/////// MEDIA ////////*/
+img {
+	border: 20px solid white;
+	margin-top: 4px;
+}
+
+.fixed-ratio-resize { /* basic responsive img */
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* IE8 */
+}
+
+/*////////// FIXES //////////*/
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+}
+
+/*/////// LAYOUT ////////*/
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.pageBorder {
+	margin-right: 200px;
+	margin-left: 200px;
+}
+
+/*javascript toggles this class */
+.menu_show {
+	right: 0!important;
+}
